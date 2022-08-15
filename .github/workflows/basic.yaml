@@ -1,16 +1,29 @@
+# this is the name of the workflow
 name: learn-gthub-actions
 
+# this specifies the trigger: everytime this code gets a push it will run the action
+# this will however affect all branches: to restrict builds on specific brances, we need to specify the 
+# chosen branch
 on: [push]
 
+# this refers to a unit of work that will run in parallel
 jobs:
+
+# the name of this job
   check-bats-version:
+
+  # specifies the underlying operating system that this job will run on
     runs-on: ubuntu-latest
 
+# this are the steps to run on this job
     steps:
+
+    # this specifies the dependencies, which are reusable github actions
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
 
+    # this specifies the commands to run on the server
       - run: npm install -g bats 
       - run: bats -v 
