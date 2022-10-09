@@ -39,7 +39,7 @@ Event->Workflow->Jobs->Runner(Container)->Action
 
 Example Workflow installs bats and tests the bats version
 
-```py
+```yml
 name: learn-github-actions
 on: [push]
 jobs:
@@ -70,7 +70,7 @@ The action.yml defines the parameters and optional parameters used by each actio
 
 [Action.yml](https://github.com/actions/setup-python/blob/main/action.yml)
 
-``` sh
+```yml
 
 name: Python package
 
