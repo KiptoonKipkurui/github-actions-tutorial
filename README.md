@@ -39,7 +39,7 @@ Event->Workflow->Jobs->Runner(Container)->Action
 
 Example Workflow installs bats and tests the bats version
 
-```
+```py
 name: learn-github-actions
 on: [push]
 jobs:
